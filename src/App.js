@@ -1,7 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import Form from './components/Form';
-import { useState } from 'react';
+import React, { useState } from 'react';
 // import About from './components/About';
 
 function App() {
