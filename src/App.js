@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Form from './components/Form';
 import React, { useState } from 'react';
 import About from './components/About';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
     const [mode, setMode] = useState('light');
@@ -23,8 +23,8 @@ function App() {
 		<Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
 		<div className="container my-3">
 			<Routes>
-				<Route exact path="/about" element={<About />} />
 				<Route exact path="/" element={<Form heading="Enter the text to analyze below" mode={mode} />} />
+				<Route exact path="/about" element={<About />} />
 			</Routes>
 		</div>
 		</Router>
