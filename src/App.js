@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import Form from './components/Form';
+import TextForm from './components/TextForm';
 import React, { useState } from 'react';
 import About from './components/About';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
@@ -23,8 +23,8 @@ function App() {
 		<Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
 		<div className="container my-3">
 			<Routes>
-				<Route exact path="/" element={<Form heading="Enter the text to analyze below" mode={mode} />} />
-				<Route exact path="/about" element={<About />} />
+				<Route exact path="/" element={<TextForm heading="Try TextUtils - word counter, character counter, remove extra spaces" mode={mode} />} />
+				<Route exact path="/about" element={<About mode={mode} />} />
 			</Routes>
 		</div>
 		</Router>
